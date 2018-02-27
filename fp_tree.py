@@ -43,7 +43,8 @@ def createTree(dataSet, minSup=1):
                 localD[item] = headerTable[item][0]
         if len(localD) > 0:
             #sort items by frequency
-            orderedItems = [v[0] for v in sorted(localD.items(), key=lambda p: p[1], reverse=True)]            updateTree(orderedItems, retTree, headerTable, count)
+            orderedItems = [v[0] for v in sorted(localD.items(), key=lambda p: p[1], reverse=True)]            
+            updateTree(orderedItems, retTree, headerTable, count)
     return retTree, headerTable
 
 
